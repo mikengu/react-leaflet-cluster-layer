@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 import L from 'leaflet';
 import { MapLayer } from 'react-leaflet';
@@ -104,11 +105,11 @@ function distanceBetweenPoints(p1: LngLat, p2: LngLat): number {
 
 export default class ClusterLayer extends MapLayer {
   static propTypes = {
-    markers: React.PropTypes.array,
-    clusterComponent: React.PropTypes.func.isRequired,
-    propsForClusters: React.PropTypes.object,
-    gridSize: React.PropTypes.number,
-    minClusterSize: React.PropTypes.number
+    markers: PropTypes.array,
+    clusterComponent: PropTypes.func.isRequired,
+    propsForClusters: PropTypes.object,
+    gridSize: PropTypes.number,
+    minClusterSize: PropTypes.number
   };
 
   state: Object = {
